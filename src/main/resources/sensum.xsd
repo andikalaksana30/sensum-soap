@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.ioh.com/api/model/sensum" xmlns:tns="http://www.ioh.com/api/model/sensum" elementFormDefault="qualified">
+
+	<element name="invokesensumRequest">
+      <complexType>
+        <sequence>
+          <element type="string" name="orderType"/>
+          <element name="contactInfo" maxOccurs="unbounded" minOccurs="1">
+            <complexType>
+              <sequence>
+                <element type="string" name="key"/>
+                <element type="string" name="value"/>
+              </sequence>
+            </complexType>
+          </element>
+          <element type="integer" name="delayMinutes"/>
+        </sequence>
+      </complexType>
+    </element>
+     
+     <element name="invokesensumResponse">
+        <complexType>
+          <sequence>
+            <element type="integer" name="status"/>
+            <element type="string" name="description"/>
+          </sequence>
+        </complexType>
+     </element>
+      
+</schema>
